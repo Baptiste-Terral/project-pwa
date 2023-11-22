@@ -1,6 +1,6 @@
 {
-    "name": "Cool Sorter",
-    "short_name": "CoolSorter",
+    "name": "Sortify",
+    "short_name": "Sortify",
     "description": "Une application géniale pour trier des éléments de manière amusante",
     "start_url": "/",
     "display": "standalone",
