@@ -29,6 +29,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: rgb(213, 132, 144);
   }
+
+  .card:hover {
+    background-color: rgb(87, 213, 59);
+  }
   
   .card img {
     width: 100%;
@@ -51,10 +55,6 @@ body {
     border-radius: 4px;
     cursor: pointer;
     
-  }
-
-  button:hover {
-    background-color: rgb(87, 213, 59);
   }
   
   #options-container {
@@ -88,6 +88,11 @@ body {
     justify-content: center;
     margin-bottom: 10px;
     cursor: pointer;
+  }
+
+  .option:hover {
+    opacity: 0.5;
+    background-color: lightgray;
   }
   
   .option img {
