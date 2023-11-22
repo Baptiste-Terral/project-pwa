@@ -54,7 +54,7 @@ body {
   }
 
   button:hover {
-    opacity: 0.5;
+    background-color: rgb(87, 213, 59);
   }
   
   #options-container {
