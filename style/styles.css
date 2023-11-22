@@ -13,9 +13,13 @@ body {
   }
   
   #card-container {
-    display: flex;
-    justify-content: space-between;
-    width: calc(80% - 60px); /* Ajustez la largeur en fonction de la marge */
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Utilise la largeur à 100% */
+  border: 2px solid #ccc; /* Ajoute une bordure centrale */
+  box-sizing: border-box; /* Inclut la bordure dans la largeur totale */
+  margin: 0 auto; /* Centre le contenu horizontalement */
+  padding: 10px; /* Ajoute un espace entre la bordure et le contenu */
     margin-bottom: 20px;
   }
   
@@ -25,6 +29,7 @@ body {
     overflow: hidden;
     width: 45%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(213, 132, 144);
   }
   
   .card img {
@@ -55,16 +60,6 @@ body {
 
   button:hover {
     opacity: 0.5;
-  }
-  
-  #btn-left {
-    background-color: #ff5959;
-    color: white;
-  }
-  
-  #btn-right {
-    background-color: #4caf50;
-    color: white;
   }
   
   #options-container {
