@@ -17,7 +17,6 @@ body {
   display: flex;
   justify-content:center;
   width: 100%; /* Utilise la largeur à 100% */
-  border: 2px solid #ccc; /* Ajoute une bordure centrale */
   box-sizing: border-box; /* Inclut la bordure dans la largeur totale */
   }
   
@@ -25,7 +24,7 @@ body {
     border: 1px solid #000000;
     border-radius: 8px;
     overflow: hidden;
-    width: 50%;
+    width: 40%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: rgb(213, 132, 144);
   }
@@ -36,7 +35,7 @@ body {
   
   .card img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
   }
   
