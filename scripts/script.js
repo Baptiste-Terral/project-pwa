@@ -1,3 +1,7 @@
+const list1 = ['img/Hamburger.png', 'img/Pizza.webp']; 
+const list2 = ['img/chocolatine.png', 'img/pain-au-chocolat.png']; 
+let currentList = null;
+
 // Load scores from localStorage
 let scoreLeft = localStorage.getItem('scoreLeft') ? parseInt(localStorage.getItem('scoreLeft')) : 0;
 let scoreRight = localStorage.getItem('scoreRight') ? parseInt(localStorage.getItem('scoreRight')) : 0;
@@ -50,7 +54,29 @@ function refreshChoice() {
   updateScoreDisplay();
   cardLeft.disabled = false;
   cardRight.disabled = false;
+
+  // Get image elements
+  const imageLeft = document.querySelector('#card-left img'); 
+  const imageRight = document.querySelector('#card-right img'); 
+
+  // Get a random list
+  const list = getRandomList();
+
+  // Set image src to images from the random list
+  imageLeft.src = list[0];
+  imageRight.src = list[1];
 }
 
 // Add event listener to "Refresh" button
 refreshButton.addEventListener('click', refreshChoice);
+
+function getRandomList() {
+  const lists = [list1, list2];
+  let newList;
+  do {
+    const index = Math.floor(Math.random() * lists.length);
+    newList = lists[index];
+  } while (newList === currentList);
+  currentList = newList;
+  return newList;
+}
