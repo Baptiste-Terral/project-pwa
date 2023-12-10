@@ -1,5 +1,11 @@
-const list1 = ['img/Hamburger.png', 'img/Pizza.webp']; 
-const list2 = ['img/chocolatine.png', 'img/pain-au-chocolat.png']; 
+scoresList1 = [0, 0];
+scoresList2 = [0, 0];
+scoresList3 = [0, 0];
+
+const list1 = ['img/Hamburger.png', 'img/Pizza.webp', scoreList1]; 
+const list2 = ['img/chocolatine.png', 'img/pain-au-chocolat.png', scoreList2];]; 
+const list3 = ['img/pikachu.png', 'img/salameche.png', scoreList3];
+const lists = [list1, list2, list3];
 let currentList = null;
 
 // Load scores from localStorage
@@ -71,7 +77,6 @@ function refreshChoice() {
 refreshButton.addEventListener('click', refreshChoice);
 
 function getRandomList() {
-  const lists = [list1, list2];
   let newList;
   do {
     const index = Math.floor(Math.random() * lists.length);
