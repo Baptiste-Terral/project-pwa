@@ -16,8 +16,8 @@ body {
   #card-container {
   display: flex;
   justify-content:center;
-  width: 100%; /* Utilise la largeur à 100% */
-  box-sizing: border-box; /* Inclut la bordure dans la largeur totale */
+  width: 100%; 
+  box-sizing: border-box; 
   }
   
   .card {
