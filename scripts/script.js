@@ -126,3 +126,25 @@ function getRandomList() {
   currentList = newList;
   return newList;
 }
+
+// Check if the DeviceOrientationEvent API is available
+if (window.DeviceOrientationEvent) {
+  // Add an event listener for the 'deviceorientation' event
+  window.addEventListener('deviceorientation', function(event) {
+    // Get the rotation around the z-axis (gamma)
+    let rotation = event.gamma;
+
+    // If the device is tilted to the left
+    if (rotation < -30) {
+      // Select the left card
+      document.getElementById('card-left').click();
+    }
+    // If the device is tilted to the right
+    else if (rotation > 30) {
+      // Select the right card
+      document.getElementById('card-right').click();
+    }
+  });
+} else {
+  console.log('Sorry, your browser does not support the DeviceOrientationEvent API.');
+}
