@@ -27,10 +27,10 @@ window.onload = function() {
     // Create img elements for the images
     let img1 = document.createElement('img');
     img1.src = list[0];
-    img1.style.width = '50px'; // Set the width to make the images smaller
+    img1.style.width = '100px'; // Set the width to make the images smaller
     let img2 = document.createElement('img');
     img2.src = list[1];
-    img2.style.width = '50px'; // Set the width to make the images smaller
+    img2.style.width = '100px'; // Set the width to make the images smaller
 
     // Create a p element for the scores
     let p = document.createElement('p');
