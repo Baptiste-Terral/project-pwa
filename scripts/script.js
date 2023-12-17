@@ -96,8 +96,8 @@ function updateScoreDisplay() {
 // Function to refresh choice
 function refreshChoice() {
   if (currentList) {
-    cardLeft.style.backgroundColor = rgb(213, 132, 144);
-    cardRight.style.backgroundColor = rgb(213, 132, 144);
+    cardLeft.style.backgroundColor = 'rgb(213, 132, 144)';
+    cardRight.style.backgroundColor = 'rgb(213, 132, 144)';
     cardLeft.disabled = false;  
     cardRight.disabled = false;
 
