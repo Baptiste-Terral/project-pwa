@@ -5,10 +5,17 @@ Cette dernière apparaît lorsque l'on passe le curseur ou que l'on clique dessu
 
 Dans notre première idée, les scores de chaque choix devaient être stockés dans une base de données (firebase), mais cela était trop chronophage à mettre en place.
 C'est pourquoi pour le bien de notre projet, ils sont simplement stockés en local, dans le navigateur de l'utilisateur.
+Il est possible de consulter les statistiques via le bouton statistiques de la bar de navigation gauche. On peut y voir les scores de chaque liste.
+Il est également possible de rafrîchir les listes de choix via le bouton de refresh de la bar de navigation gauche.
+
+Sur smartphone, il est possible d'utiliser le gyroscope de ce dernier pour effectuer un choix (droite ou gauche).
+
+Le choix effectué est associé à un fond vert foncé jusqu'à rafraîchissement pour obtenir une nouvelle liste.
 
 # Implémentation
 
-L'architecture de notre application est simple, c'est-à-dire qu'il n'y a qu'une seule page qui est le coeur de notre PWA.
+L'architecture de notre application est simple, c'est-à-dire qu'il n'y a que deux pages. La première est le coeur de notre PWA (index.html) et la deuxième sert à afficher les statistiques des scores pour chaque liste.
+Chaque page html possède son propre fichier de styles css ainsi que son propre script js dédié.
 
 ## Head :
 La section ```<head>``` contient des métadonnées comme l'encodage, la vue par défaut, le titre de la page, l'icône, la feuille de style, et le fichier manifeste.
