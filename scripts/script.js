@@ -50,6 +50,7 @@ cardLeft.addEventListener('click', () => {
     localStorage.setItem(`scoreList${lists.indexOf(currentList) + 1}_1`, currentList[2][0]); // Save score to localStorage
     updateScoreDisplay();
     disableCards();
+    cardLeft.style.backgroundColor = 'green';
   } else {
     console.error('currentList is null');
   }
@@ -61,6 +62,7 @@ cardRight.addEventListener('click', () => {
     localStorage.setItem(`scoreList${lists.indexOf(currentList) + 1}_2`, currentList[2][1]); // Save score to localStorage
     updateScoreDisplay();
     disableCards();
+    cardRight.style.backgroundColor = 'green';
   } else {
     console.error('currentList is null');
   }
@@ -94,6 +96,8 @@ function updateScoreDisplay() {
 // Function to refresh choice
 function refreshChoice() {
   if (currentList) {
+    cardLeft.style.backgroundColor = document.getElementById('card').style.backgroundColor;
+    cardRight.style.backgroundColor = document.getElementById('card').style.backgroundColor;
     cardLeft.disabled = false;  
     cardRight.disabled = false;
 
@@ -137,12 +141,14 @@ if (window.DeviceOrientationEvent) {
     // If the device is tilted to the left
     if (rotation < -30) {
       // Select the left card
-      document.getElementById('card-left').click();
+      let leftCard = document.getElementById('card-left');
+      leftCard.click();
     }
     // If the device is tilted to the right
     else if (rotation > 30) {
       // Select the right card
-      document.getElementById('card-right').click();
+      let rightCard = document.getElementById('card-right');
+      rightCard.click();
     }
   });
 } else {
